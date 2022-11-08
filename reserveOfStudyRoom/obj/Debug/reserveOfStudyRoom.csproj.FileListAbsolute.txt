@@ -1,0 +1,11 @@
+C:\Users\User\Desktop\reserveOfStudyRoom\reserveOfStudyRoom\bin\Debug\reserveOfStudyRoom.exe.config
+C:\Users\User\Desktop\reserveOfStudyRoom\reserveOfStudyRoom\bin\Debug\reserveOfStudyRoom.exe
+C:\Users\User\Desktop\reserveOfStudyRoom\reserveOfStudyRoom\bin\Debug\reserveOfStudyRoom.pdb
+C:\Users\User\Desktop\reserveOfStudyRoom\reserveOfStudyRoom\obj\Debug\reserveOfStudyRoom.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\reserveOfStudyRoom\reserveOfStudyRoom\obj\Debug\reserveOfStudyRoom.intro.resources
+C:\Users\User\Desktop\reserveOfStudyRoom\reserveOfStudyRoom\obj\Debug\reserveOfStudyRoom.Properties.Resources.resources
+C:\Users\User\Desktop\reserveOfStudyRoom\reserveOfStudyRoom\obj\Debug\reserveOfStudyRoom.csproj.GenerateResource.cache
+C:\Users\User\Desktop\reserveOfStudyRoom\reserveOfStudyRoom\obj\Debug\reserveOfStudyRoom.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\reserveOfStudyRoom\reserveOfStudyRoom\obj\Debug\reserveOfStudyRoom.exe
+C:\Users\User\Desktop\reserveOfStudyRoom\reserveOfStudyRoom\obj\Debug\reserveOfStudyRoom.pdb
+C:\Users\User\Desktop\reserveOfStudyRoom\reserveOfStudyRoom\bin\Debug\font\NanumSquareNeo-bRg.ttf
