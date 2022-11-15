@@ -8,14 +8,40 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing.Text;
+using Oracle.DataAccess.Client;
 
 namespace reserveOfStudyRoom
 {
     public partial class intro : Form
     {
+        private int SelectedRowIndex;
+        OracleDataAdapter DBAdapter;
+        DataSet DS;
+        OracleCommandBuilder myCommandBuilder;
+        DataTable reserveTable;
+
+        private void DB_Open()
+        {
+            try
+            {
+                string connectionString = "User Id=moonu; Password=1111; Data Source=(DESCRIPTION = (ADDRESS = (PROTOCOL = TCP)(HOST = localhost)(PORT = 1521)) (CONNECT_DATA = (SERVER = DEDICATED) (SERVICE_NAME = xe)));";
+                string commandString = "select * from reserver";
+                DBAdapter = new OracleDataAdapter(commandString, connectionString);
+                myCommandBuilder = new OracleCommandBuilder(DBAdapter);
+                DS = new DataSet();
+            } 
+            catch (DataException DE)
+            {
+                MessageBox.Show(DE.Message);
+            }
+            
+        } 
+
+
         public intro()
         {
             InitializeComponent();
+            //DB_Open();
 
             PrivateFontCollection privateFont = new PrivateFontCollection();
             privateFont.AddFontFile("font/NanumSquareNeo-bRg.ttf");
@@ -46,6 +72,9 @@ namespace reserveOfStudyRoom
 
         private void studentCertification_Click(object sender, EventArgs e)
         {
+            insert form2 = new insert();
+            form2.ShowDialog();
+
             panel1.Visible = true;
         }
 

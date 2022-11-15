@@ -31,9 +31,9 @@ namespace reserveOfStudyRoom
         {
             this.studentCertification = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.readingRoom = new System.Windows.Forms.Button();
             this.studyRoom = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -61,6 +61,18 @@ namespace reserveOfStudyRoom
             this.panel1.Size = new System.Drawing.Size(683, 850);
             this.panel1.TabIndex = 1;
             this.panel1.Visible = false;
+            // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(162)))), ((int)(((byte)(0)))));
+            this.label1.Font = new System.Drawing.Font("굴림", 9F);
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(-14, 349);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(700, 100);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "화면을 터치하여 선택하세요";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // readingRoom
             // 
@@ -90,18 +102,6 @@ namespace reserveOfStudyRoom
             this.studyRoom.Text = "스터디룸 예약하기";
             this.studyRoom.UseVisualStyleBackColor = false;
             this.studyRoom.Click += new System.EventHandler(this.studyRoom_Click);
-            // 
-            // label1
-            // 
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(162)))), ((int)(((byte)(0)))));
-            this.label1.Font = new System.Drawing.Font("굴림", 9F);
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(-14, 349);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(700, 100);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "화면을 터치하여 선택하세요";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // intro
             // 

@@ -9,3 +9,6 @@ C:\Users\User\Desktop\reserveOfStudyRoom\reserveOfStudyRoom\obj\Debug\reserveOfS
 C:\Users\User\Desktop\reserveOfStudyRoom\reserveOfStudyRoom\obj\Debug\reserveOfStudyRoom.exe
 C:\Users\User\Desktop\reserveOfStudyRoom\reserveOfStudyRoom\obj\Debug\reserveOfStudyRoom.pdb
 C:\Users\User\Desktop\reserveOfStudyRoom\reserveOfStudyRoom\bin\Debug\font\NanumSquareNeo-bRg.ttf
+C:\Users\User\Desktop\reserveOfStudyRoom\reserveOfStudyRoom\bin\Debug\Oracle.DataAccess.dll
+C:\Users\User\Desktop\reserveOfStudyRoom\reserveOfStudyRoom\obj\Debug\reserveOfStudyRoom.csproj.CopyComplete
+C:\Users\User\Desktop\reserveOfStudyRoom\reserveOfStudyRoom\obj\Debug\reserveOfStudyRoom.insert.resources
