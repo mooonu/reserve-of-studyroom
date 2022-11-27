@@ -80,12 +80,23 @@ namespace reserveOfStudyRoom
 
         private void readingRoom_Click(object sender, EventArgs e)
         {
-            Environment.Exit(0);
+            제1열람실 calc = new 제1열람실();
+            calc.Show();
         }
 
         private void studyRoom_Click(object sender, EventArgs e)
         {
             Environment.Exit(0);
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
