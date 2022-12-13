@@ -29,23 +29,18 @@ namespace reserveOfStudyRoom
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.DBGrid = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.NameList = new System.Windows.Forms.ListBox();
             this.button1 = new System.Windows.Forms.Button();
             this.BtnSearch = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.TxtSearch = new System.Windows.Forms.TextBox();
-            this.NameList = new System.Windows.Forms.ListBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txtName = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtid = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.DeleteBtn = new System.Windows.Forms.Button();
-            this.AppendBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DBGrid)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -55,33 +50,33 @@ namespace reserveOfStudyRoom
             // DBGrid
             // 
             this.DBGrid.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle16.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle16.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            dataGridViewCellStyle16.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DBGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DBGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.DBGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle17.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle17.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            dataGridViewCellStyle17.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DBGrid.DefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DBGrid.DefaultCellStyle = dataGridViewCellStyle2;
             this.DBGrid.Location = new System.Drawing.Point(19, 20);
             this.DBGrid.Name = "DBGrid";
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle18.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            dataGridViewCellStyle18.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DBGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DBGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.DBGrid.RowTemplate.Height = 23;
             this.DBGrid.Size = new System.Drawing.Size(481, 312);
             this.DBGrid.TabIndex = 2;
@@ -90,7 +85,6 @@ namespace reserveOfStudyRoom
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.NameList);
-            this.groupBox2.Controls.Add(this.button1);
             this.groupBox2.Controls.Add(this.DBGrid);
             this.groupBox2.ForeColor = System.Drawing.Color.White;
             this.groupBox2.Location = new System.Drawing.Point(4, 172);
@@ -100,10 +94,20 @@ namespace reserveOfStudyRoom
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "회원 목록";
             // 
+            // NameList
+            // 
+            this.NameList.FormattingEnabled = true;
+            this.NameList.ItemHeight = 12;
+            this.NameList.Location = new System.Drawing.Point(599, 20);
+            this.NameList.Name = "NameList";
+            this.NameList.Size = new System.Drawing.Size(215, 268);
+            this.NameList.TabIndex = 31;
+            this.NameList.SelectedIndexChanged += new System.EventHandler(this.NameList_SelectedIndexChanged);
+            // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.Salmon;
-            this.button1.Location = new System.Drawing.Point(391, 300);
+            this.button1.Location = new System.Drawing.Point(7, 29);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(109, 28);
             this.button1.TabIndex = 8;
@@ -141,24 +145,10 @@ namespace reserveOfStudyRoom
             this.TxtSearch.Size = new System.Drawing.Size(137, 21);
             this.TxtSearch.TabIndex = 7;
             // 
-            // NameList
-            // 
-            this.NameList.FormattingEnabled = true;
-            this.NameList.ItemHeight = 12;
-            this.NameList.Location = new System.Drawing.Point(599, 20);
-            this.NameList.Name = "NameList";
-            this.NameList.Size = new System.Drawing.Size(215, 268);
-            this.NameList.TabIndex = 31;
-            this.NameList.SelectedIndexChanged += new System.EventHandler(this.NameList_SelectedIndexChanged);
-            // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.txtName);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.txtid);
-            this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.DeleteBtn);
-            this.groupBox1.Controls.Add(this.AppendBtn);
+            this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Location = new System.Drawing.Point(16, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(488, 154);
@@ -166,57 +156,15 @@ namespace reserveOfStudyRoom
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "회원 관리";
             // 
-            // txtName
-            // 
-            this.txtName.Location = new System.Drawing.Point(133, 81);
-            this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(100, 21);
-            this.txtName.TabIndex = 39;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(79, 84);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(29, 12);
-            this.label2.TabIndex = 38;
-            this.label2.Text = "이름";
-            // 
-            // txtid
-            // 
-            this.txtid.Location = new System.Drawing.Point(133, 50);
-            this.txtid.Name = "txtid";
-            this.txtid.Size = new System.Drawing.Size(100, 21);
-            this.txtid.TabIndex = 37;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(79, 53);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(15, 12);
-            this.label1.TabIndex = 36;
-            this.label1.Text = "id";
-            // 
             // DeleteBtn
             // 
-            this.DeleteBtn.Location = new System.Drawing.Point(373, 84);
+            this.DeleteBtn.Location = new System.Drawing.Point(7, 64);
             this.DeleteBtn.Name = "DeleteBtn";
             this.DeleteBtn.Size = new System.Drawing.Size(75, 23);
             this.DeleteBtn.TabIndex = 35;
             this.DeleteBtn.Text = "삭제";
             this.DeleteBtn.UseVisualStyleBackColor = true;
             this.DeleteBtn.Click += new System.EventHandler(this.DeleteBtn_Click);
-            // 
-            // AppendBtn
-            // 
-            this.AppendBtn.Location = new System.Drawing.Point(292, 84);
-            this.AppendBtn.Name = "AppendBtn";
-            this.AppendBtn.Size = new System.Drawing.Size(75, 23);
-            this.AppendBtn.TabIndex = 34;
-            this.AppendBtn.Text = "추가";
-            this.AppendBtn.UseVisualStyleBackColor = true;
-            this.AppendBtn.Click += new System.EventHandler(this.AppendBtn_Click);
             // 
             // 관리자_메인
             // 
@@ -235,7 +183,6 @@ namespace reserveOfStudyRoom
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -250,11 +197,6 @@ namespace reserveOfStudyRoom
         private System.Windows.Forms.TextBox TxtSearch;
         private System.Windows.Forms.ListBox NameList;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox txtName;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtid;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button DeleteBtn;
-        private System.Windows.Forms.Button AppendBtn;
     }
 }

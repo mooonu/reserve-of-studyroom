@@ -73,8 +73,8 @@ namespace reserveOfStudyRoom
 
         private void studentCertification_Click(object sender, EventArgs e)
         {
-            insert form2 = new insert();
-            form2.ShowDialog();
+            //insert form2 = new insert();
+            //form2.ShowDialog();
 
             panel1.Visible = true;
         }

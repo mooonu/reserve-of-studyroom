@@ -20,11 +20,6 @@ namespace reserveOfStudyRoom
         OracleCommandBuilder myCommandBuilder;
         DataTable reserveTable;
 
-        private void ClearTextBoxes()
-        {
-            txtid.Clear();
-            txtName.Clear();
-        }
 
         private void DB_Open()
         {
@@ -72,7 +67,7 @@ namespace reserveOfStudyRoom
 
                 DataRow currRow = reserveTable.Rows[e.RowIndex];
 
-                SelectedRowIndex = Convert.ToInt32(currRow["id"]);
+                SelectedRowIndex = Convert.ToInt32(currRow["room_res_no"]);
             }
             catch (DataException DE)
             {
@@ -120,7 +115,7 @@ namespace reserveOfStudyRoom
             DataRow[] ResultRows = reserveTable.Select("name like '%" + TxtSearch.Text + "%'");
 
             DataColumn[] PrimaryKey = new DataColumn[1];
-            PrimaryKey[0] = reserveTable.Columns["id"];
+            PrimaryKey[0] = reserveTable.Columns["room_res_no"];
             reserveTable.PrimaryKey = PrimaryKey;
 
             DataRow currRow = reserveTable.Rows.Find(NameList.Text.Substring(0, 2));//*
@@ -131,62 +126,32 @@ namespace reserveOfStudyRoom
         {
             DS.Clear();
 
-            DBAdapter.Fill(DS, "reserver");
+            DBAdapter.Fill(DS, "r_room_res");
 
-            reserveTable = DS.Tables["reserver"];
+            reserveTable = DS.Tables["r_room_res"];
 
-            DataRow[] ResultRows = reserveTable.Select("name like '%" + TxtSearch.Text + "%'");
+            DataRow[] ResultRows = reserveTable.Select("stuName like '%" + TxtSearch.Text + "%'");
 
             NameList.Items.Clear();
 
             foreach (DataRow currRow in ResultRows)
             {
-                NameList.Items.Add(currRow["Id"].ToString() + " " + currRow["name"].ToString());
+                NameList.Items.Add(currRow["stuID"].ToString() + " " + currRow["stuName"].ToString());
             }
         }
 
-        private void AppendBtn_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                DS.Clear();
-                DBAdapter.Fill(DS, "reserver");
 
-                reserveTable = DS.Tables["reserver"];
-                DataRow newRow = reserveTable.NewRow();
-
-                newRow["id"] = Convert.ToInt32(txtid.Text);
-                newRow["name"] = txtName.Text;
-
-                reserveTable.Rows.Add(newRow);
-
-                DBAdapter.Update(DS, "reserver");
-
-                DS.AcceptChanges(); // 변경 수락
-                ClearTextBoxes(); // 변경 후 폼 위 텍스트 리셋 
-
-                DBGrid.DataSource = DS.Tables["reserver"].DefaultView;
-            }
-            catch (DataException DE)
-            {
-                MessageBox.Show(DE.Message);
-            }
-            catch (Exception DE)
-            {
-                MessageBox.Show(DE.Message);
-            }
-        }
 
         private void DeleteBtn_Click(object sender, EventArgs e)
         {
             try
             {
                 DS.Clear();
-                DBAdapter.Fill(DS, "reserver");
+                DBAdapter.Fill(DS, "r_room_res");
 
-                reserveTable = DS.Tables["reserver"];
+                reserveTable = DS.Tables["r_room_res"];
                 DataColumn[] PrimaryKey = new DataColumn[1];
-                PrimaryKey[0] = reserveTable.Columns["id"];
+                PrimaryKey[0] = reserveTable.Columns["room_res_no"];
                 reserveTable.PrimaryKey = PrimaryKey;
 
                 DataRow currRow = reserveTable.Rows.Find(SelectedRowIndex);
@@ -194,9 +159,9 @@ namespace reserveOfStudyRoom
                 currRow.Delete();
 
                 // 지운 후에 DataRowState 상태에서도 제거하고 변경사항 업데이트
-                DBAdapter.Update(DS.GetChanges(DataRowState.Deleted), "reserver");
+                DBAdapter.Update(DS.GetChanges(DataRowState.Deleted), "r_room_res");
 
-                DBGrid.DataSource = DS.Tables["reserver"].DefaultView;
+                DBGrid.DataSource = DS.Tables["r_room_res"].DefaultView;
             }
             catch (DataException DE)
             {

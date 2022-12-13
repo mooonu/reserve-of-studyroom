@@ -48,7 +48,7 @@ namespace reserveOfStudyRoom
             this.studentCertification.Size = new System.Drawing.Size(322, 379);
             this.studentCertification.TabIndex = 0;
             this.studentCertification.TabStop = false;
-            this.studentCertification.Text = "학생 인증";
+            this.studentCertification.Text = "예약 하기";
             this.studentCertification.UseVisualStyleBackColor = false;
             this.studentCertification.Click += new System.EventHandler(this.studentCertification_Click);
             // 
@@ -57,7 +57,7 @@ namespace reserveOfStudyRoom
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.readingRoom);
             this.panel1.Controls.Add(this.studyRoom);
-            this.panel1.Location = new System.Drawing.Point(2, 2);
+            this.panel1.Location = new System.Drawing.Point(2, 1);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(683, 850);
             this.panel1.TabIndex = 1;
@@ -82,7 +82,7 @@ namespace reserveOfStudyRoom
             this.readingRoom.BackColor = System.Drawing.Color.White;
             this.readingRoom.Font = new System.Drawing.Font("굴림", 9F);
             this.readingRoom.ForeColor = System.Drawing.Color.Black;
-            this.readingRoom.Location = new System.Drawing.Point(0, 3);
+            this.readingRoom.Location = new System.Drawing.Point(0, 0);
             this.readingRoom.Name = "readingRoom";
             this.readingRoom.Size = new System.Drawing.Size(689, 361);
             this.readingRoom.TabIndex = 5;
