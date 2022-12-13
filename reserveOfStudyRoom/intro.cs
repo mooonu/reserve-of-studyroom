@@ -68,6 +68,7 @@ namespace reserveOfStudyRoom
             fontBorderSetting(studentCertification);
             fontBorderSetting(readingRoom);
             fontBorderSetting(studyRoom);
+            fontBorderSetting(admin);
         }
 
         private void studentCertification_Click(object sender, EventArgs e)
@@ -86,7 +87,8 @@ namespace reserveOfStudyRoom
 
         private void studyRoom_Click(object sender, EventArgs e)
         {
-            Environment.Exit(0);
+            스터디룸 calc = new 스터디룸();
+            calc.Show();
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -97,6 +99,12 @@ namespace reserveOfStudyRoom
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void admin_Click(object sender, EventArgs e)
+        {
+            관리자_메인 adminView = new 관리자_메인();
+            adminView.ShowDialog();
         }
     }
 }

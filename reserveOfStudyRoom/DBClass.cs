@@ -15,7 +15,7 @@ namespace reserveOfStudyRoom
         OracleCommandBuilder myCommandBuilder;
         DataTable reserveTable;
 
-        private void DB_Open()
+        public void DB_Open()
         {
             try
             {

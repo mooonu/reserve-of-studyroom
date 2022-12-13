@@ -6,24 +6,25 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Drawing.Text;
 using System.Windows.Forms;
 using Oracle.DataAccess.Client;
 
 namespace reserveOfStudyRoom
 {
-    public partial class insert : Form
+    public partial class 스터디룸예약 : Form
     {
-        private int SelectedRowIndex;
+        int i;
         OracleDataAdapter DBAdapter;
         DataSet DS;
         OracleCommandBuilder myCommandBuilder;
         DataTable reserveTable;
-
-        private void ClearTextBoxes()
+        public 스터디룸예약()
         {
-            id.Clear();
-            name.Clear();
+            
+            InitializeComponent();
+            this.CenterToScreen();
+            DB_Open();
+
         }
 
         private void DB_Open()
@@ -31,7 +32,7 @@ namespace reserveOfStudyRoom
             try
             {
                 string connectionString = "User Id=moonu; Password=1111; Data Source=(DESCRIPTION = (ADDRESS = (PROTOCOL = TCP)(HOST = localhost)(PORT = 1521)) (CONNECT_DATA = (SERVER = DEDICATED) (SERVICE_NAME = xe)));";
-                string commandString = "select * from reserver";
+                string commandString = "select * from R_ROOM_RES";
                 DBAdapter = new OracleDataAdapter(commandString, connectionString);
                 myCommandBuilder = new OracleCommandBuilder(DBAdapter);
                 DS = new DataSet();
@@ -43,36 +44,49 @@ namespace reserveOfStudyRoom
 
         }
 
-        public insert()
+        private void 스터디룸예약_Load(object sender, EventArgs e)
         {
-            InitializeComponent();
-            DB_Open();
 
-            PrivateFontCollection privateFont = new PrivateFontCollection();
-            privateFont.AddFontFile("font/NanumSquareNeo-bRg.ttf");
-            Font font = new Font(privateFont.Families[0], 24f);
-            label1.Font = label2.Font = font;
         }
 
-        private void AppendBtn_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
+            스터디룸 calc = new 스터디룸();
+            calc.Show(); // 뒤로가기
+            this.Close(); // 창 닫기
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            i++;
             try
             {
                 DS.Clear();
-                DBAdapter.Fill(DS, "reserve");
+                DBAdapter.Fill(DS, "R_ROOM_RES");
 
-                reserveTable = DS.Tables["reserve"];
+                reserveTable = DS.Tables["R_ROOM_RES"];
                 DataRow newRow = reserveTable.NewRow();
 
-                newRow["id"] = Convert.ToInt32(id.Text);
-                newRow["name"] = name.Text;
+                newRow["room_res_no"] = i;
+                newRow["room_no"] = 2;
+                newRow["room_seat_no"] = roomName.Text;
+                newRow["room_start_time"] = reserveTime.Text;
+                newRow["room_end_time"] = 0;
 
                 reserveTable.Rows.Add(newRow);
 
-                DBAdapter.Update(DS, "reserve");
+                DBAdapter.Update(DS, "R_ROOM_RES");
                 DS.AcceptChanges();
-                ClearTextBoxes();
-                Close();
+                MessageBox.Show("예약이 되었습니다. \r 스터디룸 : " + roomName.Text + "\r 예약 시간 : " + reserveTime.Text );
+
+                스터디룸 calc = new 스터디룸();
+                // calc.btn.Text = "예약중";
+                calc.study1_10.Text = "예약중";
+                calc.Show(); // 뒤로가기
+                this.Close(); // 창 닫기
+                
+                                
+
             }
             catch (DataException DE)
             {
@@ -82,11 +96,7 @@ namespace reserveOfStudyRoom
             {
                 MessageBox.Show(DE.Message);
             }
-        }
-
-        private void close_Click(object sender, EventArgs e)
-        {
-            Close();
+            
         }
     }
 }
